@@ -27,7 +27,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-2xl font-extrabold tracking-widest text-white cursor-default hover:text-[#915EFF] transition-colors"
         >
           SG
@@ -37,7 +37,7 @@ export default function Hero() {
           href="mailto:satwikgupta0210@gmail.com"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           className="hidden md:block text-sm font-mono tracking-widest text-secondary hover:text-white transition-colors cursor-pointer"
         >
           satwikgupta0210@gmail.com
@@ -46,7 +46,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex gap-6 md:gap-10 text-xs md:text-sm font-bold tracking-widest text-secondary"
         >
           <a href="#projects" className="hover:text-white transition-colors uppercase">Work</a>
@@ -78,7 +78,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           className="flex gap-4"
         >
           <a 
@@ -102,7 +102,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
           <a 
             href="/resume" 

@@ -15,7 +15,7 @@ export default function Education() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="mb-8"
             >
               <h2 className="text-3xl font-bold font-sans flex items-center gap-3">
@@ -29,7 +29,7 @@ export default function Education() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="glass p-6 rounded-2xl border-l-4 border-l-orange-500"
               >
                 <h3 className="text-xl font-bold text-white mb-1">Dronacharya Group of Institutions</h3>
@@ -42,7 +42,7 @@ export default function Education() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                 className="glass p-6 rounded-2xl border-l-4 border-l-orange-500/50"
               >
                 <h3 className="text-xl font-bold text-white mb-1">Sri Ram Convent School</h3>
@@ -59,7 +59,7 @@ export default function Education() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="mb-8"
             >
               <h2 className="text-3xl font-bold font-sans flex items-center gap-3">
@@ -79,7 +79,7 @@ export default function Education() {
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: idx * 0.1 }}
                   className="glass p-5 rounded-xl flex items-start gap-4"
                 >
                   <div className="mt-1 p-2 bg-yellow-500/10 rounded-lg text-yellow-400 shrink-0">
@@ -96,7 +96,7 @@ export default function Education() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 className="mt-6 p-5 border border-dashed border-white/20 rounded-xl"
               >
                 <h4 className="font-bold text-gray-200 mb-2">Extra-Curricular</h4>

@@ -16,7 +16,7 @@ export default function Experience() {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">
           What I have done so far

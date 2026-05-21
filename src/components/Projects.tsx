@@ -95,7 +95,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">
           My work
@@ -107,9 +107,9 @@ export default function Projects() {
 
       <div className='w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-4'>
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center md:text-left'
         >
           Following projects showcases my skills and experience through
@@ -139,13 +139,12 @@ export default function Projects() {
         <AnimatePresence>
           {filteredProjects.map((project, index) => (
             <motion.div
-              layout
               key={project.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: index * 0.1 }}
+              exit={{ opacity: 0, y: -40 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
             >
               <Tilt
                 options={{ max: 45, scale: 1, speed: 450 }}
