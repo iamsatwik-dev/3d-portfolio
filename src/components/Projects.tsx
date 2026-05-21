@@ -141,11 +141,11 @@ export default function Projects() {
             <motion.div
               layout
               key={project.title}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: index * 0.1 }}
             >
               <Tilt
                 options={{ max: 45, scale: 1, speed: 450 }}

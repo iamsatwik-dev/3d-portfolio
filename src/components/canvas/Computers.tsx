@@ -9,13 +9,13 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
   const meshRef = useRef<any>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useFrame((state) => {
     if (meshRef.current) {
-      // Map mouse position (-1 to +1) to rotation angles. 
-      // X-axis pointer gives Y-axis rotation (360 degrees = Math.PI * 2, but let's give it a good range)
-      const targetRotationY = state.pointer.x * Math.PI; 
-      const targetRotationX = -(state.pointer.y * Math.PI) / 4;
+      // If hovered, map pointer to rotation. Otherwise, reset to default rotation.
+      const targetRotationY = isHovered ? state.pointer.x * (Math.PI / 3) : -0.01; 
+      const targetRotationX = isHovered ? -(state.pointer.y * Math.PI) / 6 : -0.2;
 
       // Smoothly interpolate the current rotation towards the target rotation
       meshRef.current.rotation.y += (targetRotationY - meshRef.current.rotation.y) * 0.05;
@@ -25,6 +25,16 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
 
   return (
     <mesh ref={meshRef}>
+      {/* Invisible hover area that triggers the rotation */}
+      <mesh 
+        position={[0, 0, 0]} 
+        onPointerOver={() => setIsHovered(true)} 
+        onPointerOut={() => setIsHovered(false)}
+      >
+        <boxGeometry args={[20, 15, 15]} />
+        <meshBasicMaterial visible={false} />
+      </mesh>
+
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
