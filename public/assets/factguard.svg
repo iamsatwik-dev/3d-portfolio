@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="50%" stop-color="#4C1D95" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg)" />
+  
+  <g transform="translate(400, 250)">
+    <!-- Shield Icon -->
+    <path d="M0 -60 L-50 -40 L-50 20 C-50 60 -10 90 0 100 C10 90 50 60 50 20 L50 -40 Z" 
+          fill="none" stroke="url(#textGrad)" stroke-width="8" stroke-linejoin="round" />
+    <!-- Checkmark -->
+    <path d="M-20 10 L-5 25 L25 -10" 
+          fill="none" stroke="#F472B6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <text x="400" y="420" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="64" fill="white" text-anchor="middle">
+    FactGuard AI
+  </text>
+  
+  <text x="400" y="480" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="28" fill="#CBD5E1" text-anchor="middle">
+    Live Web + LLaMA 3.3 Verification
+  </text>
+</svg>

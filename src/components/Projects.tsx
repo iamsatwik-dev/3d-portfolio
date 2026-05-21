@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Tilt } from "react-tilt";
 import { FolderGit2, ExternalLink } from "lucide-react";
 
 const GithubIcon = ({ size = 24, className }: { size?: number, className?: string }) => (
@@ -17,111 +18,62 @@ interface Project {
   github: string;
   live?: string;
   category: "fullstack" | "backend" | "frontend";
+  image?: string;
 }
 
 const projects: Project[] = [
   {
-    title: "FactGuard AI – Automated Fact-Checker",
+    title: "FactGuard AI",
     category: "backend",
-    tech: ["Streamlit", "Python", "LLaMA 3.3", "SerpAPI", "pdfplumber"],
-    description: "An AI-powered fact-checking dashboard that uploads PDFs, extracts verifiable claims, queries Google live via SerpAPI, and verifies assertions using LLaMA 3.3 to flag inaccuracies.",
+    tech: ["Streamlit", "Python", "LLaMA 3.3"],
+    description: "An AI-powered fact-checking dashboard that verifies assertions using LLaMA 3.3.",
     github: "https://github.com/iamsatwik-dev/factguard-ai",
-    live: "https://factguard-ai.streamlit.app/"
+    live: "https://factguard-ai.streamlit.app/",
+    image: "/assets/factguard.png"
   },
   {
-    title: "Lyftr AI – Ingestion Service",
+    title: "Lyftr AI",
     category: "backend",
-    tech: ["FastAPI", "Python", "SQLite", "Docker", "Docker Compose"],
-    description: "A production-ready FastAPI microservice for webhook ingestion featuring HMAC signature security, idempotent storage constraints, and containerized deployment.",
+    tech: ["FastAPI", "Python", "Docker"],
+    description: "A production-ready FastAPI microservice for webhook ingestion featuring HMAC signature security.",
     github: "https://github.com/iamsatwik-dev/lftyr-ai-backend"
   },
   {
-    title: "ERP System – ABC IT Solutions",
+    title: "ERP System",
     category: "fullstack",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API"],
-    description: "A role-based MERN stack ERP with separate Admin and Employee portals, managing modules for Enquiries, Quotations, Job Applications, Leave Approvals, and Salary Slips with PDF export support.",
+    tech: ["MongoDB", "Express", "React", "Node"],
+    description: "A role-based MERN stack ERP with separate Admin and Employee portals.",
     github: "https://github.com/iamsatwik-dev/ERP_SYSTEM"
   },
   {
-    title: "Stayverse - Hotel Booking Platform",
+    title: "Stayverse",
     category: "fullstack",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Bootstrap", "HTML/CSS"],
-    description: "Developed a hotel booking platform with user authentication, validation, and search functionality. Implemented full CRUD features for rooms, dynamic reviews, and a responsive UI.",
+    tech: ["MongoDB", "Express", "React", "Node"],
+    description: "Developed a hotel booking platform with user authentication, validation, and search.",
     github: "https://github.com/iamsatwik-dev/Stayverse"
   },
   {
-    title: "myVideoCall – WebRTC Video Conferencing",
+    title: "myVideoCall",
     category: "fullstack",
-    tech: ["WebRTC", "Socket.io", "React.js", "Node.js", "Express.js"],
-    description: "A full-stack peer-to-peer video conferencing application built with WebRTC and Socket.io for real-time signaling, complete with audio/video toggles.",
+    tech: ["WebRTC", "Socket.io", "React", "Node"],
+    description: "A full-stack peer-to-peer video conferencing application built with WebRTC.",
     github: "https://github.com/iamsatwik-dev/myVideoCall"
   },
   {
-    title: "Taskify – Advanced Todo List",
+    title: "Taskify",
     category: "frontend",
-    tech: ["React.js", "Vite", "TailwindCSS", "Local Storage"],
-    description: "A premium kanban-style project tracking board supporting multiple categories, priority badges, responsive interfaces, and offline local storage persistence.",
+    tech: ["React", "Vite", "TailwindCSS"],
+    description: "A premium kanban-style project tracking board supporting multiple categories.",
     github: "https://github.com/iamsatwik-dev/my-todo-list",
     live: "https://taskify-lite.netlify.app/"
-  },
-  {
-    title: "AtmosView – React Weather App",
-    category: "frontend",
-    tech: ["React.js", "Vite", "OpenWeather API", "CSS"],
-    description: "A high-fidelity weather metrics tracking client rendering real-time atmospheric data, intuitive icons, and custom city forecast charts.",
-    github: "https://github.com/iamsatwik-dev/weather-app-react",
-    live: "https://atmosview.netlify.app/"
-  },
-  {
-    title: "Weather Forecast Dashboard",
-    category: "frontend",
-    tech: ["React.js", "Vite", "OpenWeather API", "TailwindCSS"],
-    description: "Interactive real-time atmospheric dashboard providing precise multi-city searches, custom analytical indicators, and weather widgets.",
-    github: "https://github.com/iamsatwik-dev/Weather-forecast-react",
-    live: "https://weather-forecast-react-s9yw.onrender.com"
-  },
-  {
-    title: "Django Blogging Website",
-    category: "backend",
-    tech: ["Django", "Python", "SQLite", "Bootstrap", "HTML/CSS"],
-    description: "A full-featured server-rendered publishing workspace with secure user authentication, post curation, comment management, and media uploads.",
-    github: "https://github.com/iamsatwik-dev/django-blog-project"
-  },
-  {
-    title: "E-Commerce App",
-    category: "fullstack",
-    tech: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB"],
-    description: "Full-stack e-commerce marketplace featuring robust state tracking using Redux, a unified cart experience, product catalogs, and order search.",
-    github: "https://github.com/iamsatwik-dev/E-Commerce"
-  },
-  {
-    title: "Social Media Dashboard",
-    category: "frontend",
-    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    description: "Sleek analytics tracking dashboard with dark mode switching, premium micro-animations, dynamic cards, and fully responsive grids.",
-    github: "https://github.com/iamsatwik-dev/Social_media_dashboard"
-  },
-  {
-    title: "Zerodha Web Clone",
-    category: "fullstack",
-    tech: ["React.js", "Chart.js", "TailwindCSS", "Node.js"],
-    description: "A beautiful trading workspace clone of the Zerodha Kite app, featuring financial chart displays, portfolios, and investment metrics.",
-    github: "https://github.com/iamsatwik-dev/Zerodha-clone"
-  },
-  {
-    title: "Student Registration Portal",
-    category: "frontend",
-    tech: ["JavaScript", "HTML", "CSS", "Local Storage"],
-    description: "A responsive database UI for student records enabling quick registrations, validations, live searches, and seamless CRUD storage persistence.",
-    github: "https://github.com/iamsatwik-dev/student-registration"
   }
 ];
 
 const categories = [
   { id: "all", label: "All Projects" },
-  { id: "fullstack", label: "Full-Stack & Web" },
-  { id: "backend", label: "AI & Backend" },
-  { id: "frontend", label: "Frontend & Utils" }
+  { id: "fullstack", label: "Full-Stack" },
+  { id: "backend", label: "Backend" },
+  { id: "frontend", label: "Frontend" }
 ];
 
 export default function Projects() {
@@ -132,114 +84,111 @@ export default function Projects() {
   );
 
   return (
-    <section className="py-20 relative z-10" id="projects">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold font-sans flex items-center gap-3">
-              <FolderGit2 className="text-purple-500" /> Curated Projects
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mt-4 rounded-full"></div>
-          </motion.div>
+    <section className="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0" id="projects">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">
+          My work
+        </p>
+        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center">
+          Projects.
+        </h2>
+      </motion.div>
 
-          {/* Premium Filter Tabs */}
-          <motion.div 
-            className="flex flex-wrap gap-2 bg-white/5 p-1 rounded-xl backdrop-blur-md border border-white/10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? "text-white shadow-lg"
-                    : "text-gray-400 hover:text-white cursor-pointer"
-                }`}
-              >
-                {activeCategory === category.id && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                {category.label}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Dynamic Project Grid with AnimatePresence */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      <div className='w-full flex justify-between items-center'>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                layout
-                key={project.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="glass rounded-2xl p-6 flex flex-col h-full group hover:-translate-y-2 hover:border-purple-500/30 transition-all duration-300"
+          Following projects showcases my skills and experience through
+          real-world examples of my work. Each project is briefly described with
+          links to code repositories and live demos in it.
+        </motion.p>
+        
+        {/* Category Filter */}
+        <div className="hidden md:flex gap-2">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${
+                activeCategory === category.id
+                  ? "bg-[#915EFF] text-white"
+                  : "bg-tertiary text-secondary hover:text-white"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
+        <AnimatePresence>
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              layout
+              key={project.title}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <Tilt
+                options={{ max: 45, scale: 1, speed: 450 }}
+                className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[380px] flex flex-col shadow-card'
               >
-                <div className="flex justify-between items-start mb-4">
-                  <FolderGit2 className="w-10 h-10 text-purple-400" />
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/5 hover:border-white/20 text-gray-300 hover:text-white transition-all hover:scale-105"
-                      >
-                        <GithubIcon size={18} />
-                      </a>
-                    )}
+                <div className='relative w-full h-[180px] bg-black-100 rounded-2xl p-4 flex items-center justify-center overflow-hidden'>
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover absolute inset-0 rounded-xl" />
+                  ) : (
+                    <FolderGit2 className="w-20 h-20 text-[#915EFF] opacity-20 absolute" />
+                  )}
+                  
+                  <div className='absolute inset-0 flex justify-end m-3 gap-2'>
                     {project.live && (
-                      <a 
-                        href={project.live} 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/5 hover:border-white/20 text-gray-300 hover:text-white transition-all hover:scale-105"
+                      <div
+                        onClick={() => window.open(project.live, "_blank")}
+                        className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-all'
                       >
-                        <ExternalLink size={18} />
-                      </a>
+                        <ExternalLink size={18} className="text-white" />
+                      </div>
                     )}
+                    <div
+                      onClick={() => window.open(project.github, "_blank")}
+                      className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-all'
+                    >
+                      <GithubIcon size={18} className="text-white" />
+                    </div>
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="text-xs font-mono text-purple-300 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/10">
-                      {tech}
-                    </span>
+
+                <div className='mt-5 flex-grow'>
+                  <h3 className='text-white font-bold text-[24px]'>{project.title}</h3>
+                  <p className='mt-2 text-secondary text-[14px]'>{project.description}</p>
+                </div>
+
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {project.tech.map((tag) => (
+                    <p
+                      key={`${project.title}-${tag}`}
+                      className='text-[14px] blue-text-gradient font-medium'
+                    >
+                      #{tag}
+                    </p>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+              </Tilt>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </section>
   );
