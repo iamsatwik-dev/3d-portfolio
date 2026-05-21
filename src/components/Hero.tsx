@@ -66,8 +66,7 @@ export default function Hero() {
             Hi, I'm <span className='text-[#915EFF]'>Satwik</span>
           </h1>
           <p className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2">
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+            An aspiring Software Engineer
           </p>
         </div>
       </div>
@@ -117,7 +116,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+      <div className='absolute bottom-32 w-full flex justify-center items-center'>
         <a href='#experience'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div

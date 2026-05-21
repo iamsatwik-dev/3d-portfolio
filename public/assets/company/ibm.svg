@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Circular Background -->
+  <circle cx="50" cy="50" r="50" fill="#000000" />
+  
+  <!-- Blue Stripes -->
+  <g fill="#0530AD">
+    <rect x="20" y="32" width="60" height="6" />
+    <rect x="20" y="42" width="60" height="6" />
+    <rect x="20" y="52" width="60" height="6" />
+    <rect x="20" y="62" width="60" height="6" />
+  </g>
+  
+  <!-- Text -->
+  <text x="50" y="63" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">
+    IBM
+  </text>
+  
+  <!-- Overlay to cut text into stripes (Simulating IBM logo) -->
+  <g fill="#000000">
+    <rect x="15" y="38" width="70" height="4" />
+    <rect x="15" y="48" width="70" height="4" />
+    <rect x="15" y="58" width="70" height="4" />
+  </g>
+</svg>

@@ -38,7 +38,11 @@ export default function Experience() {
             iconStyle={{ background: "#383E56" }}
             icon={
               <div className='flex justify-center items-center w-full h-full'>
-                <Briefcase className="text-white" />
+                <img
+                  src="/assets/company/ibm.svg"
+                  alt="IBM"
+                  className="w-[60%] h-[60%] object-contain"
+                />
               </div>
             }
           >

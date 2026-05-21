@@ -37,10 +37,10 @@ export default function Contact() {
       <StarsCanvas />
 
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0, x: -300 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl relative z-10"
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-center">
@@ -112,9 +112,10 @@ export default function Contact() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 300 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative z-10'
       >
         <EarthCanvas />

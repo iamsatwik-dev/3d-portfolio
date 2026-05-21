@@ -23,27 +23,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "FactGuard AI",
-    category: "backend",
-    tech: ["Streamlit", "Python", "LLaMA 3.3"],
-    description: "An AI-powered fact-checking dashboard that verifies assertions using LLaMA 3.3.",
-    github: "https://github.com/iamsatwik-dev/factguard-ai",
-    live: "https://factguard-ai.streamlit.app/",
-    image: "/assets/factguard.png"
-  },
-  {
-    title: "Lyftr AI",
-    category: "backend",
-    tech: ["FastAPI", "Python", "Docker"],
-    description: "A production-ready FastAPI microservice for webhook ingestion featuring HMAC signature security.",
-    github: "https://github.com/iamsatwik-dev/lftyr-ai-backend"
-  },
-  {
     title: "ERP System",
     category: "fullstack",
     tech: ["MongoDB", "Express", "React", "Node"],
     description: "A role-based MERN stack ERP with separate Admin and Employee portals.",
-    github: "https://github.com/iamsatwik-dev/ERP_SYSTEM"
+    github: "https://github.com/iamsatwik-dev/ERP_SYSTEM",
+    live: "https://erp-system-3ux9.onrender.com/",
+    image: "/assets/erpSystem.png"
+  },
+  {
+    title: "myVideoCall",
+    category: "fullstack",
+    tech: ["WebRTC", "Socket.io", "React", "Node"],
+    description: "A full-stack peer-to-peer video conferencing application built with WebRTC.",
+    github: "https://github.com/iamsatwik-dev/myVideoCall",
+    live: "https://my-video-call-one.vercel.app/hy",
+    image: "/assets/myVideoCall.png"
   },
   {
     title: "Stayverse",
@@ -53,11 +48,22 @@ const projects: Project[] = [
     github: "https://github.com/iamsatwik-dev/Stayverse"
   },
   {
-    title: "myVideoCall",
-    category: "fullstack",
-    tech: ["WebRTC", "Socket.io", "React", "Node"],
-    description: "A full-stack peer-to-peer video conferencing application built with WebRTC.",
-    github: "https://github.com/iamsatwik-dev/myVideoCall"
+    title: "FactGuard AI",
+    category: "backend",
+    tech: ["Streamlit", "Python", "LLaMA 3.3"],
+    description: "An AI-powered fact-checking dashboard that verifies assertions using LLaMA 3.3.",
+    github: "https://github.com/iamsatwik-dev/factguard-ai",
+    live: "https://factguard-ai.streamlit.app/",
+    image: "/assets/factguard.png"
+  },
+  {
+    title: "Weather Forecast",
+    category: "frontend",
+    tech: ["React", "API", "TailwindCSS"],
+    description: "A responsive weather forecasting application providing real-time data and conditions.",
+    github: "https://github.com/iamsatwik-dev/weather-app-react",
+    live: "https://atmosview.netlify.app/",
+    image: "/assets/weatherapp.png"
   },
   {
     title: "Taskify",
@@ -99,12 +105,12 @@ export default function Projects() {
         </h2>
       </motion.div>
 
-      <div className='w-full flex justify-between items-center'>
+      <div className='w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-4'>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center md:text-left'
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -112,7 +118,7 @@ export default function Projects() {
         </motion.p>
         
         {/* Category Filter */}
-        <div className="hidden md:flex gap-2">
+        <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-0">
           {categories.map((category) => (
             <button
               key={category.id}
