@@ -50,7 +50,7 @@ export default function ResumePage() {
               Satwik Gupta
             </h1>
             <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-xs md:text-sm font-sans font-medium text-neutral-600 print:text-neutral-700">
-              <Link href="/" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">Portfolio</Link>
+              <a href="https://3d-portfolio-iamsatwik-dev.vercel.app" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">Portfolio</a>
               <span className="text-neutral-400">|</span>
               <a href="mailto:satwikgupta0210@gmail.com" className="hover:underline">satwikgupta0210@gmail.com</a>
               <span className="text-neutral-400">|</span>
