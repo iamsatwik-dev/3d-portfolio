@@ -38,198 +38,162 @@ export default function ResumePage() {
       </header>
 
       {/* Main Resume Sheet Container */}
-      <main className="flex-1 flex justify-center items-start py-10 px-4 md:px-8 bg-neutral-950 print:bg-white print:p-0 print:m-0">
+      <main className="flex-1 flex justify-center items-start py-8 px-4 md:px-8 bg-neutral-950 print:bg-white print:p-0 print:m-0">
         <div 
           ref={printAreaRef}
-          className="w-full max-w-[850px] bg-white text-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-10 md:p-12 border border-neutral-200 rounded-sm font-serif leading-relaxed print:shadow-none print:border-none print:p-0 print:m-0 print:max-w-full"
+          className="w-full max-w-[850px] bg-white text-black shadow-[0_20px_50px_rgba(0,0,0,0.5)] px-10 py-8 border border-neutral-200 font-serif leading-[1.35] print:shadow-none print:border-none print:p-0 print:m-0 print:max-w-full"
           style={{ fontFamily: "'Times New Roman', Times, serif" }}
         >
           {/* Header Section */}
-          <div className="text-center border-b-[1.5px] border-neutral-300 pb-3">
-            <h1 className="text-4xl font-bold tracking-tight text-neutral-900 mb-1.5">
+          <div className="text-center pb-2">
+            <h1 className="text-[26px] font-bold text-black mb-1">
               Satwik Gupta
             </h1>
-            <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-xs md:text-sm font-sans font-medium text-neutral-600 print:text-neutral-700">
-              <a href="https://3d-portfolio-iamsatwik-dev.vercel.app" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">Portfolio</a>
-              <span className="text-neutral-400">|</span>
-              <a href="mailto:satwikgupta0210@gmail.com" className="hover:underline">satwikgupta0210@gmail.com</a>
-              <span className="text-neutral-400">|</span>
-              <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">LinkedIn</a>
-              <span className="text-neutral-400">|</span>
-              <a href="https://github.com/iamsatwik-dev" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">GitHub</a>
-              <span className="text-neutral-400">|</span>
-              <span>Noida</span>
-              <span className="text-neutral-400">|</span>
-              <span>+91-9005613717</span>
+            <div className="flex flex-wrap justify-center items-center gap-x-2 text-[12.5px] text-blue-700 font-medium print:text-blue-700">
+              <a href="https://3d-portfolio-iamsatwik-dev.vercel.app" target="_blank" rel="noreferrer">Portfolio</a>
+              <a href="mailto:satwikgupta0210@gmail.com">satwikgupta0210@gmail.com</a>
+              <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/iamsatwik-dev" target="_blank" rel="noreferrer">GitHub</a>
+              <span className="text-black font-normal">Noida</span>
+              <span className="text-blue-700">+91-9005613717</span>
             </div>
           </div>
 
-          {/* Summary Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Summary
+          {/* Section: SUMMARY */}
+          <div className="mt-1">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              SUMMARY
             </h2>
-            <p className="text-[13.5px] text-neutral-800 text-justify leading-relaxed">
+            <p className="text-[12px] text-black text-justify">
               Results-driven Computer Science final-year graduate with hands-on experience in full stack web development. Proficient in building end-to-end applications using modern frontend and backend technologies. Eager to contribute to innovative teams and deliver scalable, user-centric solutions.
             </p>
           </div>
 
-          {/* Skills Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Skills
+          {/* Section: SKILLS */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              SKILLS
             </h2>
-            <div className="text-[13.5px] text-neutral-800 space-y-1">
-              <div>
-                <strong className="font-bold">Programming Languages:</strong> C, C++, Python
-              </div>
-              <div>
-                <strong className="font-bold">Frontend:</strong> HTML, CSS, JavaScript
-              </div>
-              <div>
-                <strong className="font-bold">Backend:</strong> Node.js, Express.js, RESTful API
-              </div>
-              <div>
-                <strong className="font-bold">Frameworks / Libraries:</strong> React.js, React Native, Bootstrap, Tailwind CSS
-              </div>
-              <div>
-                <strong className="font-bold">Databases:</strong> MongoDB, SQL
-              </div>
-              <div>
-                <strong className="font-bold">Tools & Technologies:</strong> Git, GitHub, VS Code, Postman, MS Excel, Unix/Linux Commands
-              </div>
+            <div className="text-[12px] text-black space-y-0.5">
+              <div><strong className="font-bold">Programming Languages:</strong> C, C++, Python</div>
+              <div><strong className="font-bold">Frontend:</strong> HTML, CSS, JavaScript,</div>
+              <div><strong className="font-bold">Backend:</strong> Node.js, Express.js, RESTful API</div>
+              <div><strong className="font-bold">Frameworks / Libraries:</strong> React.js, React Native, Bootstrap, Tailwind CSS</div>
+              <div><strong className="font-bold">Databases:</strong> MongoDB, SQL</div>
+              <div><strong className="font-bold">Tools & Technologies:</strong> Git, GitHub, VS Code, Postman, MS Excel, Unix/Linux Commands</div>
             </div>
           </div>
 
-          {/* Work Experience Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Work Experience/Internship
+          {/* Section: WORK EXPERIENCE/INTERNSHIP */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              WORK EXPERIENCE/INTERNSHIP
             </h2>
-            <div className="text-[13.5px] text-neutral-800">
-              <div className="flex justify-between items-baseline mb-0.5">
-                <span className="font-bold text-neutral-900 text-sm">Web Development Trainee – IBM</span>
-                <span className="italic text-xs font-sans text-neutral-600 print:text-neutral-700">Feb 2026 – Mar 2026</span>
-              </div>
-              <ul className="list-disc pl-5 mt-1 space-y-0.5 text-neutral-800">
-                <li>One-month training on <strong className="font-bold text-neutral-900">MERN stack development</strong>.</li>
-                <li>Built full-stack web applications and REST APIs.</li>
-                <li>Practiced database integration with <strong className="font-bold text-neutral-900">MongoDB</strong>.</li>
+            <div className="text-[12px] text-black">
+              <div className="font-bold text-black text-[12px]">Web Development Trainee - IBM</div>
+              <div className="italic text-[12px] text-black mb-1">Feb 2026 - Mar 2026</div>
+              <ul className="list-none space-y-0.5 text-black ml-1.5">
+                <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>One-month training on <strong className="font-bold">MERN stack development</strong>.</span></li>
+                <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Built full-stack web applications and REST APIs.</span></li>
+                <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Practiced database integration with <strong className="font-bold">MongoDB</strong>.</span></li>
               </ul>
             </div>
           </div>
 
-          {/* Projects Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Projects
+          {/* Section: PROJECTS */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              PROJECTS
             </h2>
-            <div className="text-[13.5px] text-neutral-800 space-y-4">
+            <div className="text-[12px] text-black space-y-2.5">
               {/* Project 1 */}
               <div>
-                <div className="flex justify-between items-baseline mb-0.5">
-                  <span className="font-bold text-neutral-900 text-[14px] flex items-center gap-1.5">
-                    ● ERP System – ABC IT Solutions (MERN Stack)
-                  </span>
+                <div className="font-bold text-black text-[12px] flex gap-1.5 mb-0.5">
+                  <span className="text-[10px] mt-[1px]">●</span> ERP System – ABC IT Solutions (MERN Stack)
                 </div>
-                <ul className="list-disc pl-5 mt-1 space-y-0.5 text-neutral-850">
-                  <li>Developed a role-based MERN stack ERP with separate <strong className="font-bold text-neutral-900">Admin and Employee portals</strong>, managing modules for Enquiries, Quotations, Job Applications, Leave Approvals, and Salary Slips.</li>
-                  <li>Built <strong className="font-bold text-neutral-900">leave management and salary slip generation</strong> with PDF download support and monthly quota tracking for employees.</li>
-                  <li><strong className="font-bold text-neutral-850">Technologies:</strong> MongoDB, Express.js, React.js, Node.js, REST API</li>
-                  <li><strong className="font-bold text-neutral-850">Link:</strong> <a href="https://github.com/iamsatwik-dev" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">GitHub Repo</a></li>
+                <ul className="list-none space-y-0.5 text-black ml-5">
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Developed a role-based MERN stack ERP with separate <strong className="font-bold">Admin and Employee portals</strong>, managing modules for Enquiries, Quotations, Job Applications, Leave Approvals, and Salary Slips.</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Built <strong className="font-bold">leave management and salary slip generation</strong> with PDF download support and monthly quota tracking for employees.</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Technologies:</strong> MongoDB, Express.js, React.js, Node.js, REST API</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Link:</strong> <a href="#" className="text-blue-700 underline">GitHub Repo</a> | <a href="#" className="text-blue-700 underline">Live</a></span></li>
                 </ul>
               </div>
 
               {/* Project 2 */}
               <div>
-                <div className="flex justify-between items-baseline mb-0.5">
-                  <span className="font-bold text-neutral-900 text-[14px]">
-                    ● Weather App Forecast - React Based Project
-                  </span>
+                <div className="font-bold text-black text-[12px] flex gap-1.5 mb-0.5">
+                  <span className="text-[10px] mt-[1px]">●</span> MyVideoCall - Video Conferencing Web Application:
                 </div>
-                <ul className="list-disc pl-5 mt-1 space-y-0.5 text-neutral-850">
-                  <li>Built a responsive weather application that displays real-time weather data using <strong className="font-bold text-neutral-900">OpenWeather API</strong>.</li>
-                  <li><strong className="font-bold text-neutral-850">Technologies:</strong> HTML, CSS, JavaScript, Open Weather API</li>
-                  <li><strong className="font-bold text-neutral-850">Link:</strong> <a href="https://github.com/iamsatwik-dev" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">GitHub Repo</a> | <a href="#" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">Live</a></li>
+                <ul className="list-none space-y-0.5 text-black ml-5">
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Developed a real-time video conferencing application with video/audio calling, screen sharing, live chat, and peer-to-peer communication using <strong className="font-bold">WebRTC and Socket.io</strong>.</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Technologies:</strong> React.js, Node.js, Express.js, Socket.io, WebRTC, MongoDB | <a href="#" className="text-blue-700 underline">GitHub Repo</a> | <a href="#" className="text-blue-700 underline">Live</a></span></li>
                 </ul>
               </div>
 
               {/* Project 3 */}
               <div>
-                <div className="flex justify-between items-baseline mb-0.5">
-                  <span className="font-bold text-neutral-900 text-[14px]">
-                    ● Stayverse - Hotel Booking Platform
-                  </span>
+                <div className="font-bold text-black text-[12px] flex gap-1.5 mb-0.5">
+                  <span className="text-[10px] mt-[1px]">●</span> Stayverse - Hotel Booking Platform:
                 </div>
-                <ul className="list-disc pl-5 mt-1 space-y-0.5 text-neutral-850">
-                  <li>Developed a hotel booking platform with <strong className="font-bold text-neutral-900">user authentication, validation, and search functionality</strong>.</li>
-                  <li>Implemented CRUD operations, and a responsive UI, improving product management efficiency.</li>
-                  <li><strong className="font-bold text-neutral-850">Technologies:</strong> MongoDB, Express.js, Node.js, HTML, CSS, Bootstrap</li>
-                  <li><strong className="font-bold text-neutral-850">Link:</strong> <a href="https://github.com/iamsatwik-dev" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">GitHub Repo</a></li>
+                <ul className="list-none space-y-0.5 text-black ml-5">
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Developed a hotel booking platform with <strong className="font-bold">user authentication, validation, and search functionality</strong>.</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Implemented CRUD operations, and a responsive UI, improving product management efficiency.</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Technologies:</strong> MongoDB, Express.js, Node.js, HTML, CSS, Bootstrap</span></li>
+                  <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Link:</strong> <a href="#" className="text-blue-700 underline">GitHub Repo</a></span></li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Extra-Curricular Activities */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Extra-Curricular Activities
+          {/* Section: EXTRA-CURRICULAR ACTIVITIES */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              EXTRA-CURRICULAR ACTIVITIES
             </h2>
-            <ul className="list-disc pl-5 text-[13.5px] text-neutral-800 space-y-0.5">
-              <li>Completed online courses in C++ algorithms, and web development.</li>
-              <li>Solved 100+ problems on LeetCode covering arrays, linked lists, and dynamic programming.</li>
+            <ul className="list-none space-y-0.5 text-[12px] text-black ml-1.5">
+              <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Completed online courses in C++ algorithms, and web development.</span></li>
+              <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span>Solved 100+ problems on LeetCode covering arrays, linked lists, and dynamic programming.</span></li>
             </ul>
           </div>
 
-          {/* Certification Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Certification
+          {/* Section: CERTIFICATION */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              CERTIFICATION
             </h2>
-            <ul className="list-disc pl-5 text-[13.5px] text-neutral-800 space-y-0.5">
-              <li><strong className="font-bold text-neutral-900">DSA with C++:</strong> By Apna College</li>
-              <li><strong className="font-bold text-neutral-900">MERN Full Stack Development:</strong> By Apna College</li>
-              <li>
-                <strong className="font-bold text-neutral-900">Virtual Internship – Web, Mobile Development & Marketing:</strong> IBM Developer Skills Network (Feb–Mar 2026) : <a href="#" className="text-cyan-700 hover:text-cyan-900 underline print:text-neutral-800">LINK</a>
-              </li>
+            <ul className="list-none space-y-0.5 text-[12px] text-black ml-1.5">
+              <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">DSA with C++:</strong> By Apna College</span></li>
+              <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">MERN Full Stack Development:</strong> By Apna College</span></li>
+              <li className="flex gap-1.5"><span className="text-[10px] mt-[1px]">●</span> <span><strong className="font-bold">Virtual Internship – Web, Mobile Development & Marketing,</strong> IBM Developer Skills Network (Feb–Mar 2026) : <a href="#" className="text-blue-700 underline">LINK</a></span></li>
             </ul>
           </div>
 
-          {/* Education Section */}
-          <div className="mt-5">
-            <h2 className="text-base font-bold tracking-wider uppercase text-neutral-900 border-b-[1.2px] border-neutral-300 pb-0.5 mb-2">
-              Education
+          {/* Section: EDUCATION */}
+          <div className="mt-2.5">
+            <h2 className="text-[13.5px] font-bold uppercase text-black border-b-[1px] border-black pb-0.5 mb-1.5">
+              EDUCATION
             </h2>
-            <div className="text-[13.5px] text-neutral-800 space-y-3.5">
+            <div className="text-[12px] text-black space-y-2">
+              {/* College */}
               <div>
-                <div className="flex justify-between items-baseline font-bold text-neutral-900 text-sm">
-                  <span>Dronacharya Group of Institutions, Greater Noida</span>
-                  <span className="italic text-xs font-sans text-neutral-600 print:text-neutral-700 font-medium">Nov'2022-May'2026</span>
+                <div className="flex justify-between items-baseline font-bold text-black mb-0.5">
+                  <span>Dronacharya Group of Institutions , Greater Noida</span>
+                  <span className="font-normal text-black text-[12px]">Nov 2022-May 2026</span>
                 </div>
-                <div className="text-neutral-750">
-                  Bachelor of Technology<br />
-                  Computer Science and Information Technology | <strong className="font-bold text-neutral-900">CGPA</strong> : 7.8
-                </div>
+                <div>Bachelor of Technology</div>
+                <div>Computer Science and Information Technology | <strong className="font-bold">CGPA :7.8</strong></div>
               </div>
 
+              {/* School */}
               <div>
-                <div className="flex justify-between items-baseline font-bold text-neutral-900 text-sm">
-                  <span>Sri Ram Convent School, Varanasi</span>
-                  <span className="italic text-xs font-sans text-neutral-600 print:text-neutral-700 font-medium">Aug| 2022</span>
+                <div className="font-bold text-black mb-0.5">Sri Ram Convent School, Varanasi</div>
+                <div className="flex justify-between items-baseline mb-0.5">
+                  <span>Higher Secondary(12th) | CBSE |Percentage: 77%</span>
+                  <span className="text-black text-[12px]">Aug 2022</span>
                 </div>
-                <div className="text-neutral-750">
-                  Higher Secondary(12th) | CBSE | <strong className="font-bold text-neutral-900">Percentage</strong>: 77%
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-baseline font-bold text-neutral-900 text-sm">
-                  <span>Sri Ram Convent School, Varanasi</span>
-                  <span className="italic text-xs font-sans text-neutral-600 print:text-neutral-700 font-medium">Aug| 2020</span>
-                </div>
-                <div className="text-neutral-750">
-                  Secondary(10th) | CBSE | <strong className="font-bold text-neutral-900">Percentage</strong>: 84%
+                <div className="flex justify-between items-baseline">
+                  <span>Secondary(10th) | CBSE | Percentage: 84%</span>
+                  <span className="text-black text-[12px]">Aug 2020</span>
                 </div>
               </div>
             </div>
