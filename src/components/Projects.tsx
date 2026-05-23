@@ -45,7 +45,9 @@ const projects: Project[] = [
     category: "fullstack",
     tech: ["MongoDB", "Express", "React", "Node"],
     description: "Developed a hotel booking platform with user authentication, validation, and search.",
-    github: "https://github.com/iamsatwik-dev/Stayverse"
+    github: "https://github.com/iamsatwik-dev/Stayverse",
+    live: "https://stayverse-9tbt.onrender.com",
+    image: "/assets/stayverse.png"
   },
   {
     title: "FactGuard AI",
@@ -71,7 +73,8 @@ const projects: Project[] = [
     tech: ["React", "Vite", "TailwindCSS"],
     description: "A premium kanban-style project tracking board supporting multiple categories.",
     github: "https://github.com/iamsatwik-dev/my-todo-list",
-    live: "https://taskify-lite.netlify.app/"
+    live: "https://taskify-lite.netlify.app/",
+    image: "/assets/taskify.png"
   }
 ];
 
@@ -116,18 +119,17 @@ export default function Projects() {
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it.
         </motion.p>
-        
+
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mt-6 md:mt-0">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${
-                activeCategory === category.id
+              className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${activeCategory === category.id
                   ? "bg-[#915EFF] text-white"
                   : "bg-tertiary text-secondary hover:text-white"
-              }`}
+                }`}
             >
               {category.label}
             </button>
@@ -156,7 +158,7 @@ export default function Projects() {
                   ) : (
                     <FolderGit2 className="w-20 h-20 text-[#915EFF] opacity-20 absolute" />
                   )}
-                  
+
                   <div className='absolute inset-0 flex justify-end m-3 gap-2'>
                     {project.live && (
                       <div

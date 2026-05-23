@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, ExternalLink } from "lucide-react";
 
 export default function Education() {
   return (
@@ -70,9 +70,9 @@ export default function Education() {
 
             <div className="space-y-4">
               {[
-                { title: "DSA with C++", org: "Apna College" },
-                { title: "MERN Full Stack Development", org: "Apna College" },
-                { title: "Virtual Internship – Web, Mobile Dev & Marketing", org: "IBM Developer Skills Network (Feb–Mar 2026)" },
+                { title: "DSA with C++", org: "Apna College", image: "/assets/stemCertificate.png" },
+                { title: "MERN Full Stack Development", org: "Apna College", image: "/assets/webDevCerticate.png" },
+                { title: "Virtual Internship – Web, Mobile Dev & Marketing", org: "IBM Developer Skills Network (Feb–Mar 2026)", image: "/assets/ibmCertificate.png" },
               ].map((cert, idx) => (
                 <motion.div
                   key={idx}
@@ -80,15 +80,24 @@ export default function Education() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: idx * 0.1 }}
-                  className="glass p-5 rounded-xl flex items-start gap-4"
                 >
-                  <div className="mt-1 p-2 bg-yellow-500/10 rounded-lg text-yellow-400 shrink-0">
-                    <Award size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-white text-lg">{cert.title}</h4>
-                    <p className="text-gray-400 text-sm">{cert.org}</p>
-                  </div>
+                  <a 
+                    href={cert.image} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="glass p-5 rounded-xl flex items-start gap-4 hover:bg-white/5 transition-colors cursor-pointer group block"
+                  >
+                    <div className="mt-1 p-2 bg-yellow-500/10 rounded-lg text-yellow-400 shrink-0 group-hover:scale-110 transition-transform">
+                      <Award size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <h4 className="font-bold text-white text-lg group-hover:text-yellow-400 transition-colors">{cert.title}</h4>
+                        <ExternalLink size={16} className="text-gray-500 group-hover:text-yellow-400 transition-colors mt-1" />
+                      </div>
+                      <p className="text-gray-400 text-sm">{cert.org}</p>
+                    </div>
+                  </a>
                 </motion.div>
               ))}
 
