@@ -70,10 +70,26 @@ export default function Education() {
 
             <div className="space-y-4">
               {[
-                { title: "DSA with C++", org: "Apna College", image: "/assets/stemCertificate.png" },
+                { title: "DSA with C++", org: "Apna College" },
                 { title: "MERN Full Stack Development", org: "Apna College", image: "/assets/webDevCerticate.png" },
                 { title: "Virtual Internship – Web, Mobile Dev & Marketing", org: "IBM Developer Skills Network (Feb–Mar 2026)", image: "/assets/ibmCertificate.png" },
-              ].map((cert, idx) => (
+              ].map((cert, idx) => {
+                const innerContent = (
+                  <>
+                    <div className={`mt-1 p-2 bg-yellow-500/10 rounded-lg text-yellow-400 shrink-0 ${cert.image ? 'group-hover:scale-110 transition-transform' : ''}`}>
+                      <Award size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <h4 className={`font-bold text-white text-lg ${cert.image ? 'group-hover:text-yellow-400 transition-colors' : ''}`}>{cert.title}</h4>
+                        {cert.image && <ExternalLink size={16} className="text-gray-500 group-hover:text-yellow-400 transition-colors mt-1" />}
+                      </div>
+                      <p className="text-gray-400 text-sm">{cert.org}</p>
+                    </div>
+                  </>
+                );
+
+                return (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 15 }}
@@ -81,25 +97,23 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: idx * 0.1 }}
                 >
-                  <a 
-                    href={cert.image} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="glass p-5 rounded-xl flex items-start gap-4 hover:bg-white/5 transition-colors cursor-pointer group block"
-                  >
-                    <div className="mt-1 p-2 bg-yellow-500/10 rounded-lg text-yellow-400 shrink-0 group-hover:scale-110 transition-transform">
-                      <Award size={20} />
+                  {cert.image ? (
+                    <a 
+                      href={cert.image} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="glass p-5 rounded-xl flex items-start gap-4 hover:bg-white/5 transition-colors cursor-pointer group block"
+                    >
+                      {innerContent}
+                    </a>
+                  ) : (
+                    <div className="glass p-5 rounded-xl flex items-start gap-4">
+                      {innerContent}
                     </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start">
-                        <h4 className="font-bold text-white text-lg group-hover:text-yellow-400 transition-colors">{cert.title}</h4>
-                        <ExternalLink size={16} className="text-gray-500 group-hover:text-yellow-400 transition-colors mt-1" />
-                      </div>
-                      <p className="text-gray-400 text-sm">{cert.org}</p>
-                    </div>
-                  </a>
+                  )}
                 </motion.div>
-              ))}
+                );
+              })}
 
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
